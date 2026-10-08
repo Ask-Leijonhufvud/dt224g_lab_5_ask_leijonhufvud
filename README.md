@@ -1,5 +1,7 @@
 # DT224G - Laboration 5
 
+[GitHub Pages](https://ask-leijonhufvud.github.io/dt224g_lab_5_ask_leijonhufvud/)
+
 ## Beskrivning
 
 Detta är/var en skoluppgift med syftet att:
