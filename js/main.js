@@ -144,8 +144,13 @@ function saveHistory() {
  */
 function loadHistory() {
     // Hämta eventuell sparad historik
+    let storedHistory = localStorage.getItem("history");
 
     // Uppdatera history
+    // om det finns någon historik lagrad
+    if (storedHistory !== null) {
+        history = JSON.parse(storedHistory);
+    }
 }
 
 
