@@ -140,9 +140,18 @@ function renderHistory() {
  * Rensar formulär, aktuellt studentkort och felmeddelanden.
  */
 function clearForm() {
-    // Återställ formulär och studentkort
+    // Återställ formulär
+    fullnameInput.value = "";
+    emailInput.value = "";
+    phoneInput.value = "";
+    fontSelect.value = "Georgia";
 
     // Rensa eventuella felmeddelanden
+    // så länge det finns felmeddelanden i listan
+    while (errorList.firstChild !== null) {
+        // ta bort det första felmeddelandet
+        errorList.removeChild(errorList.firstChild);
+    }
 }
 
 
