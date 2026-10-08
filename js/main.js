@@ -34,10 +34,34 @@ let history = [];
  */
 function validateForm() {
     // Kontrollera formulärets obligatoriska fält
+    let isValid = true; // variabel som anger om formulärets inmatning är korrekt, vi börjar med att anta att den är det
+    // om namn ej matats in
+    if (fullnameInput.value.trim() === "") {
+        // lägg till felmeddelande i array
+        errors.push("Du måste ange ett namn"); 
+        // ange att inmatning ej är korrekt
+        isValid = false; 
+    }
+    // om en email-address ej inmatats
+    if (emailInput.value.trim() === "") {
+        // lägg till felmeddelande i array
+        errors.push("Du måste ange en email-address");
+        // ange att inmatning ej är korrekt
+        isValid = false;
+    }
+    // om ett telefonnummer ej inmatats
+    if (phoneInput.value.trim() === "") {
+        // lägg till felmeddelande i array
+        errors.push("Du måste ange ett telefonnummer");
+        // ange att inmatning ej är korrekt
+        isValid = false;
+    }
 
     // Visa eventuella felmeddelanden
+    displayErrors();
 
     // Returnera resultatet (true eller false) av valideringen
+    return isValid;
 }
 
 
