@@ -161,6 +161,15 @@ function deleteHistory() {
 // När formuläret skickas:
 // - validera inmatningen
 // - skapa studentkort om valideringen lyckas
+form.addEventListener("submit", event => {
+    // preventdefault
+    event.preventDefault()
+    // om inmatningen är korrekt
+    if (validateForm() == true) {
+        // skapa studentkort
+        createStudentCard();
+    }
+})
 
 
 // När användaren klickar på "Rensa"
