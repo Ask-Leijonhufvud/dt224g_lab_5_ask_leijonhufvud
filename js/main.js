@@ -153,8 +153,36 @@ function loadHistory() {
  */
 function renderHistory() {
     // Rensa tidigare visad historik
+    historySection.innerHTML = "";
 
     // Skriv ut innehållet i history till DOM
+    history.forEach(card => {
+        const studentCard = document.createElement("article");
+        studentCard.style.border = "solid";
+        studentCard.style.padding = "10px";
+
+        // namn
+        const name = document.createElement("p");
+        name.textContent = card.name;
+        studentCard.appendChild(name);
+
+        // email
+        const email = document.createElement("p");
+         email.textContent = card.email;
+        studentCard.appendChild(email);
+
+        // telefonnummer
+        const phone = document.createElement("p");
+         phone.textContent = card.phone;
+        studentCard.appendChild(phone);
+
+        // font
+        const font = document.createElement("p");
+         font.textContent = card.font;
+        studentCard.appendChild(font);
+
+        historySection.appendChild(studentCard);
+    });
 }
 
 
