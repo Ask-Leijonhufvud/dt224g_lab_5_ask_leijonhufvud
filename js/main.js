@@ -114,7 +114,6 @@ function createStudentCard() {
     // uppdatera telefonnummer
     previewPhone.textContent = phone;
     previewPhone.style.fontFamily = font;
-    // av okända anledningar verkar endast courier och arial visas för mig, kan inte hitta varför
 
     // Lägg till studentkortet i historiken
     history.unshift({
