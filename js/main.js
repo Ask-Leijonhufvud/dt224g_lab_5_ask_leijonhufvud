@@ -117,7 +117,7 @@ function createStudentCard() {
     // av okända anledningar verkar endast courier och arial visas för mig, kan inte hitta varför
 
     // Lägg till studentkortet i historiken
-    history.push({
+    history.unshift({
         name: name,
         email: email,
         phone: phone,
