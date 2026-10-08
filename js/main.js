@@ -70,8 +70,21 @@ function validateForm() {
  */
 function displayErrors() {
     // Rensa tidigare felmeddelanden
+    // så länge det finns felmeddelanden i listan
+    while (errorList.firstChild !== null) {
+        // ta bort det första felmeddelandet
+        errorList.removeChild(errorList.firstChild);
+    }
 
     // Skriv ut aktuella felmeddelanden till DOM
+    errors.forEach(error => {
+        // skapa ett li-element
+        const errorNode = document.createElement("li");
+        // lägg till felmeddelande till li-element
+        errorNode.textContent = error;
+        // lägg till li-element till felmeddelandelista
+        errorList.appendChild(errorNode);
+    });
 }
 
 
