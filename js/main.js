@@ -99,12 +99,34 @@ function displayErrors() {
  */
 function createStudentCard() {
     // Hämta information från formuläret
+    const name = fullnameInput.value;
+    const email = emailInput.value;
+    const phone = phoneInput.value;
+    const font = fontSelect.value;
 
     // Uppdatera studentkortet
+    // uppdatera namn
+    previewFullname.textContent = name;
+    previewFullname.style.fontFamily = font;
+    // uppdatera email
+    previewEmail.textContent = email;
+    previewEmail.style.fontFamily = font;
+    // uppdatera telefonnummer
+    previewPhone.textContent = phone;
+    previewPhone.style.fontFamily = font;
+    // av okända anledningar verkar endast courier och arial visas för mig, kan inte hitta varför
 
     // Lägg till studentkortet i historiken
+    history.push({
+        name: name,
+        email: email,
+        phone: phone,
+        font: font
+    })
 
     // Spara och uppdatera historiken
+    saveHistory();
+    renderHistory();
 }
 
 
