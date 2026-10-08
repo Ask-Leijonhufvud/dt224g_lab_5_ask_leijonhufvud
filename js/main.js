@@ -135,6 +135,7 @@ function createStudentCard() {
  */
 function saveHistory() {
     // Spara history i localStorage
+    localStorage.setItem("history", JSON.stringify(history));
 }
 
 
