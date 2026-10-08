@@ -33,6 +33,12 @@ let history = [];
  * @returns {boolean}
  */
 function validateForm() {
+    // rensa errors-array
+    for (let i = errors.length - 1; i >= 0; i--) {
+        // remove an element from the array
+        errors.pop();
+    }
+
     // Kontrollera formulärets obligatoriska fält
     let isValid = true; // variabel som anger om formulärets inmatning är korrekt, vi börjar med att anta att den är det
     // om namn ej matats in
